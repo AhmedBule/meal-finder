@@ -12,14 +12,21 @@ function searchMeal(e) {
     e.preventDefault();
 
     //Clear single meal
-    single_mealEl.innerHTML = " ";
+    single_mealEl.innerHTML = '';
 
     //Get seach term
     const term = search.value
 
-    console.log(term)
-}
+    //Check for empty 
+    if (term.trim()) {
 
+    } else {
+        alert("Please enter a seach term")
+    }
+
+};
+
+console.log(term)
 
 // Event Listener
-submit.addEventListener('submit', seachMeal)
+submit.addEventListener('submit', searchMeal);
